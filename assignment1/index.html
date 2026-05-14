@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Dev Notes | HTML & CSS Fundamentals</title>
+    <meta
+      name="description"
+      content="A practice project covering HTML structure, CSS box model, font sizing, and positioning"
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, web development, box model, positioning, SEO"
+    />
+    <meta name="author" content="Aishwarya Rajmohan" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Web Dev Notes | HTML & CSS Fundamentals"
+    />
+    <meta
+      property="og:description"
+      content="A hands-on HTML & CSS practice reference page."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand">Web Dev Notes</div>
+      <ul class="nav-links">
+        <li><a href="#html-tags">HTML Tags</a></li>
+        <li><a href="#seo-tags">SEO Tags</a></li>
+        <li><a href="#grid-layout">3x3 Grid Layout</a></li>
+        <li><a href="#box-model">Box Model</a></li>
+        <li><a href="#font-sizes">Font Sizes</a></li>
+        <li><a href="#positioning">Positioning</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <header class="header">
+        <h1>HTML and CSS Fundamentals - Assignment 1</h1>
+        <ul>
+          <li>
+            HTML. Create a webpage with a navbar, some main content with one
+            main header and 4 subheaders and sections, and a footer. Also
+            provide a list of the 10 most useful tags (e.g. div) for you in HTML
+          </li>
+          <li>
+            HTML. Research about SEO and provide a list of some of the most
+            important header tags that you should add to your pages for SEO
+          </li>
+          <li>
+            HTML. In the page create a grid of 3x3 like layout without using
+            table, or any css. Just use divs and spans
+          </li>
+          <li>
+            CSS. Create a gallery that showcases the options for the box
+            modelLinks to an external site. using css For each row change the
+            values of border, margin and padding. For the columns try three
+            different values (e.g. 0px 5px 10px)
+          </li>
+          <li>
+            CSS. Create an itemized list with the same text and 6 different font
+            sizes, use inline styling. Choose a combination of absolute and
+            relative sizesLinks to an external site.. Explain on each item when
+            would you use that unit by means of an example
+          </li>
+          <li>
+            CSS. Add a creative part of the page that uses 4 different
+            positioningLinks to an external site. options. Try to think and
+            explain when would you use these options. Use that positioning to
+            make sure that your footer stays on the bottom of the screen
+          </li>
+        </ul>
+      </header>
+
+      <!-- SECTION 1 — HTML Tags -->
+      <section id="html-tags" class="section section-alt">
+        <h2 class="section-title">01 — Essential HTML Tags</h2>
+        <p class="section-intro">10 most useful HTML elements</p>
+        <div class="tags-grid">
+          <div class="tag-card">
+            <code>&lt;div&gt;</code>
+            <p>
+              The generic block-level container. Used for grouping and layout.
+            </p>
+          </div>
+          <div class="tag-card">
+            <code>&lt;span&gt;</code>
+            <p>
+              Inline container for styling a piece of text without breaking
+              flow.
+            </p>
+          </div>
+          <div class="tag-card">
+            <code>&lt;a&gt;</code>
+            <p>
+              Anchor tag — creates hyperlinks to pages, files, or page sections.
+            </p>
+          </div>
+          <div class="tag-card">
+            <code>&lt;p&gt;</code>
+            <p>Paragraph text. The default block for readable body content.</p>
+          </div>
+          <div class="tag-card">
+            <code>&lt;ul&gt; / &lt;ol&gt;</code>
+            <p>
+              Unordered and ordered lists. Used for navigation, steps, or items.
+            </p>
+          </div>
+          <div class="tag-card">
+            <code>&lt;img&gt;</code>
+            <p>
+              Embeds images. Always add <em>alt</em> text for accessibility and
+              SEO.
+            </p>
+          </div>
+          <div class="tag-card">
+            <code>&lt;input&gt;</code>
+            <p>Form input fields — text, email, checkbox, radio, and more.</p>
+          </div>
+          <div class="tag-card">
+            <code>&lt;button&gt;</code>
+            <p>Clickable button. More accessible than a div with an onClick.</p>
+          </div>
+          <div class="tag-card">
+            <code>&lt;section&gt;</code>
+            <p>Semantic grouping of related content with its own heading.</p>
+          </div>
+          <div class="tag-card">
+            <code>&lt;header&gt; / &lt;footer&gt;</code>
+            <p>
+              Semantic landmarks for the top and bottom of a page or section.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2 — SEO Tags -->
+      <section id="seo-tags" class="section">
+        <h2 class="section-title">02 — SEO Meta & Header Tags</h2>
+        <p class="section-intro">
+          These tags live inside <code>&lt;head&gt;</code> and are invisible on
+          the page. This section shows the tags used for this site.
+        </p>
+
+        <div class="tags-grid">
+          <div class="tag-card">
+            <code>&lt;title&gt;</code>
+            <p>
+              <strong>Most important SEO tag.</strong> Shown in the browser tab
+              and as the clickable link in Google results. Should be under 60
+              characters with the primary keyword near the front.
+            </p>
+            <p>
+              <code
+                >&lt;title&gt;Web Dev Notes | HTML &amp; CSS
+                Fundamentals&lt;/title&gt;</code
+              >
+            </p>
+          </div>
+
+          <div class="tag-card">
+            <code>meta description</code>
+            <p>
+              The summary snippet shown under a page link in search results.
+              Does not directly affect ranking but strongly affects
+              <strong>click-through rate</strong>. Aim for 150–160 characters.
+            </p>
+            <p>
+              <code
+                >&lt;meta name="description" content="A practice project
+                covering HTML structure, CSS box model, font sizing, and
+                positioning" /&gt;</code
+              >
+            </p>
+          </div>
+
+          <div class="tag-card">
+            <code>meta keywords</code>
+            <p>
+              Once important, now largely ignored by Google. Still used by a few
+              minor search engines. Low priority in modern SEO.
+            </p>
+            <p>
+              <code
+                >&lt;meta name="keywords" content="HTML, CSS, web development,
+                box model, positioning, SEO" /&gt;</code
+              >
+            </p>
+          </div>
+
+          <div class="tag-card">
+            <code>viewport</code>
+            <p>
+              Tells the browser how to scale the page on mobile.
+              <strong>Required</strong> for responsive design. Google uses
+              mobile-first indexing, so omitting this tag negatively affects
+              ranking.
+            </p>
+            <p>
+              <code
+                >&lt;meta name="viewport" content="width=device-width,
+                initial-scale=1.0" /&gt;</code
+              >
+            </p>
+          </div>
+
+          <div class="tag-card">
+            <code>canonical</code>
+            <p>
+              Prevents <strong>duplicate content penalties</strong>. If the same
+              page is accessible at multiple URLs, canonical tells Google which
+              one is the official version to index.
+            </p>
+            <p>
+              <code
+                >&lt;link rel="canonical"
+                href="https://yoursite.com/web-dev-notes" /&gt;</code
+              >
+            </p>
+          </div>
+
+          <div class="tag-card">
+            <code>robots</code>
+            <p>
+              Controls whether search engine crawlers index the page and follow
+              its links. <strong>noindex</strong> is used on admin pages,
+              thank-you pages, or content not meant to appear in search results.
+            </p>
+            <p>
+              <code>&lt;meta name="robots" content="index, follow" /&gt;</code>
+            </p>
+          </div>
+
+          <div class="tag-card">
+            <code>og:title</code>
+            <p>
+              <strong>Open Graph Title</strong> tags control how the page title
+              appears when shared on Facebook, LinkedIn, Slack, etc. Without
+              them, platforms attempt to guess the title — usually inaccurately.
+            </p>
+            <p>
+              <code
+                >&lt;meta property="og:title" content="Web Dev Notes | HTML
+                &amp; CSS Fundamentals" /&gt;</code
+              >
+            </p>
+          </div>
+
+          <div class="tag-card">
+            <code>og:description</code>
+            <p>
+              <strong>Open Graph Description</strong> tags control how the page
+              description snippet appears when shared on Facebook, LinkedIn,
+              Slack, etc. Without them, platforms attempt to guess the content
+              summary — usually inaccurately.
+            </p>
+            <p>
+              <code
+                >&lt;meta property="og:description" content="A hands-on HTML
+                &amp; CSS practice reference page." /&gt;</code
+              >
+            </p>
+          </div>
+
+          <div class="tag-card">
+            <code>og:image</code>
+            <p>
+              The thumbnail displayed when a page is shared on social media. The
+              recommended size is 1200×630px. This tag significantly affects
+              engagement on shared links.
+            </p>
+            <p>
+              <code
+                >&lt;meta property="og:image"
+                content="https://yoursite.com/preview.jpg" /&gt;</code
+              >
+            </p>
+          </div>
+
+          <div class="tag-card">
+            <code>og:type</code>
+            <p>Declares the kind of content (website, article, video).</p>
+            <p>
+              <code>&lt;meta property="og:type" content="website" /&gt;</code>
+            </p>
+          </div>
+
+          <div class="tag-card">
+            <code>og:url</code>
+            <p>
+              Sets the canonical URL for the shared object — important for
+              share-count aggregation.
+            </p>
+            <p>
+              <code
+                >&lt;meta property="og:url" content="https://yoursite.com/"
+                /&gt;</code
+              >
+            </p>
+          </div>
+
+          <div class="tag-card">
+            <code>author</code>
+            <p>
+              Identifies the creator of the page. Not used by Google for
+              ranking, but useful for attribution and can appear in search
+              results for article-type content.
+            </p>
+            <p>
+              <code
+                >&lt;meta name="author" content="Aishwarya Rajmohan" /&gt;</code
+              >
+            </p>
+          </div>
+
+          <div class="tag-card">
+            <code>charset</code>
+            <p>
+              Tells the browser how to decode the text on the page.
+              <strong>UTF-8 is the standard</strong> — it supports every
+              language and emoji. Should be the first tag inside &lt;head&gt;.
+            </p>
+            <p><code>&lt;meta charset="UTF-8" /&gt;</code></p>
+          </div>
+
+          <div class="tag-card">
+            <code>lang</code>
+            <p>
+              Set on the &lt;html&gt; tag itself, not a meta tag. Tells search
+              engines and screen readers what language the page is written in.
+              Important for <strong>accessibility</strong> and international
+              SEO.
+            </p>
+            <p><code>&lt;html lang="en"&gt;</code></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3 — 3x3 Grid -->
+      <section id="grid-layout" class="section section-alt">
+        <h3 class="section-title">03 — 3×3 Grid Layout</h3>
+        <p class="section-intro">
+          Each row is a <code>&lt;div&gt;</code> with
+          <code>display:inline-block</code> children
+          (<code>&lt;span&gt;</code>). Grid, flexbox, table etc. are not used.
+        </p>
+        <div class="plain-grid">
+          <div class="grid-row">
+            <span class="grid-cell">R1 C1</span
+            ><span class="grid-cell">R1 C2</span
+            ><span class="grid-cell">R1 C3</span>
+          </div>
+          <div class="grid-row">
+            <span class="grid-cell">R2 C1</span
+            ><span class="grid-cell">R2 C2</span
+            ><span class="grid-cell">R2 C3</span>
+          </div>
+          <div class="grid-row">
+            <span class="grid-cell">R3 C1</span
+            ><span class="grid-cell">R3 C2</span
+            ><span class="grid-cell">R3 C3</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4 — Box Model -->
+      <section id="box-model" class="section">
+        <h2 class="section-title">04 — The CSS Box Model</h2>
+        <p class="section-intro">
+          Every HTML element is a box. Each row below changes
+          <strong>border</strong>, <strong>margin</strong>, or
+          <strong>padding</strong>. Each column uses three values:
+          <strong>0px</strong>, <strong>5px</strong>, and <strong>10px</strong>.
+          The yellow area reveals margin space. The dark blue box shows padding
+          growth.
+        </p>
+
+        <div class="box-gallery">
+          <div class="box-gallery-row">
+            <h3 class="box-row-title">
+              Row 1: Border changes (denoted by black colour)
+            </h3>
+            <div class="box-columns">
+              <div class="box-wrapper">
+                <div class="box-css-label">border: 0px</div>
+                <div
+                  class="box-element"
+                  style="margin: 10px; padding: 15px; border: 0px solid #2d3436"
+                >
+                  <div class="box-inner">Content</div>
+                </div>
+              </div>
+
+              <div class="box-wrapper">
+                <div class="box-css-label">border: 5px</div>
+                <div
+                  class="box-element"
+                  style="margin: 10px; padding: 15px; border: 5px solid #2d3436"
+                >
+                  <div class="box-inner">Content</div>
+                </div>
+              </div>
+
+              <div class="box-wrapper">
+                <div class="box-css-label">border: 10px</div>
+                <div
+                  class="box-element"
+                  style="
+                    margin: 10px;
+                    padding: 15px;
+                    border: 10px solid #2d3436;
+                  "
+                >
+                  <div class="box-inner">Content</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box-gallery-row">
+            <h3 class="box-row-title">
+              Row 2: Margin changes (denoted by teal colour)
+            </h3>
+            <div class="box-columns">
+              <div class="box-wrapper">
+                <div class="box-css-label">margin: 0px</div>
+                <div
+                  class="box-element"
+                  style="margin: 0px; padding: 15px; border: 4px solid #2d3436"
+                >
+                  <div class="box-inner">Content</div>
+                </div>
+              </div>
+
+              <div class="box-wrapper">
+                <div class="box-css-label">margin: 5px</div>
+                <div
+                  class="box-element"
+                  style="margin: 5px; padding: 15px; border: 4px solid #2d3436"
+                >
+                  <div class="box-inner">Content</div>
+                </div>
+              </div>
+
+              <div class="box-wrapper">
+                <div class="box-css-label">margin: 10px</div>
+                <div
+                  class="box-element"
+                  style="margin: 10px; padding: 15px; border: 4px solid #2d3436"
+                >
+                  <div class="box-inner">Content</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box-gallery-row">
+            <h3 class="box-row-title">
+              Row 3: Padding changes (denoted by rose colour)
+            </h3>
+            <div class="box-columns">
+              <div class="box-wrapper">
+                <div class="box-css-label">padding: 0px</div>
+                <div
+                  class="box-element"
+                  style="margin: 10px; padding: 0px; border: 4px solid #2d3436"
+                >
+                  <div class="box-inner">Content</div>
+                </div>
+              </div>
+
+              <div class="box-wrapper">
+                <div class="box-css-label">padding: 5px</div>
+                <div
+                  class="box-element"
+                  style="margin: 10px; padding: 5px; border: 4px solid #2d3436"
+                >
+                  <div class="box-inner">Content</div>
+                </div>
+              </div>
+
+              <div class="box-wrapper">
+                <div class="box-css-label">padding: 10px</div>
+                <div
+                  class="box-element"
+                  style="margin: 10px; padding: 10px; border: 4px solid #2d3436"
+                >
+                  <div class="box-inner">Content</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5 — Font Sizes -->
+      <section id="font-sizes" class="section section-alt">
+        <h2 class="section-title">05 — Font Size Units</h2>
+        <p class="section-intro">
+          The same text rendered in 6 different units — a mix of absolute and
+          relative sizes:
+        </p>
+
+        <ul class="font-list">
+          <li>
+            <span class="unit-badge">12px</span>
+            <span class="unit-type">Absolute</span>
+            <span class="unit-text" style="font-size: 12px"
+              >The quick brown fox jumps over the lazy dog.</span
+            >
+            <span class="unit-note"
+              >Use <code>px</code> when pixel-perfect control is needed, like a
+              fixed badge or icon label. Does not scale with user font
+              preferences.</span
+            >
+          </li>
+          <li>
+            <span class="unit-badge">1.5em</span>
+            <span class="unit-type">Relative</span>
+            <span class="unit-text" style="font-size: 1.5em"
+              >The quick brown fox jumps over the lazy dog.</span
+            >
+            <span class="unit-note"
+              >Use <code>em</code> for sizes relative to the
+              <em>parent</em> element. Useful for components that should scale
+              with their container's font size.</span
+            >
+          </li>
+          <li>
+            <span class="unit-badge">1rem</span>
+            <span class="unit-type">Relative</span>
+            <span class="unit-text" style="font-size: 1rem"
+              >The quick brown fox jumps over the lazy dog.</span
+            >
+            <span class="unit-note"
+              >Use <code>rem</code> for sizes relative to the
+              <em>root</em> (html) font size. Preferred for body text —
+              predictable and respects user browser settings.</span
+            >
+          </li>
+          <li>
+            <span class="unit-badge">2.5rem</span>
+            <span class="unit-type">Relative</span>
+            <span class="unit-text" style="font-size: 2.5rem"
+              >The quick brown fox jumps over the lazy dog.</span
+            >
+            <span class="unit-note"
+              >Use larger <code>rem</code> values for headings. Scales
+              consistently across the site when the root font size
+              changes.</span
+            >
+          </li>
+          <li>
+            <span class="unit-badge">150%</span>
+            <span class="unit-type">Relative</span>
+            <span class="unit-text" style="font-size: 150%"
+              >The quick brown fox jumps over the lazy dog.</span
+            >
+            <span class="unit-note"
+              >Use <code>%</code> when the size should be a proportion of the
+              parent's font size. Useful in fluid and responsive layouts.</span
+            >
+          </li>
+          <li>
+            <span class="unit-badge">18pt</span>
+            <span class="unit-type">Absolute</span>
+            <span class="unit-text" style="font-size: 18pt"
+              >The quick brown fox jumps over the lazy dog.</span
+            >
+            <span class="unit-note"
+              >Use <code>pt</code> for print stylesheets. 1pt = 1/72 inch. Avoid
+              on screen — use <code>px</code> or <code>rem</code> instead.</span
+            >
+          </li>
+        </ul>
+      </section>
+
+      <!-- SECTION 6 — Positioning -->
+      <section id="positioning" class="section">
+        <h2 class="section-title">06 — CSS Positioning</h2>
+        <p class="section-intro">
+          Four values for <code>position</code>, each behaves differently. The
+          desk below shows them in context — each item represents a positioning
+          type.
+        </p>
+
+        <div class="positioning-explainers">
+          <div class="pos-card">
+            <div class="pos-tag pos-static">static</div>
+            <p>
+              The <strong>default</strong> for every element. Flows in normal
+              document order. <code>top</code>, <code>left</code> etc. have no
+              effect. Use when the element needs no special placement.
+            </p>
+          </div>
+          <div class="pos-card">
+            <div class="pos-tag pos-relative">relative</div>
+            <p>
+              Stays in document flow but can be nudged with
+              <code>top/left/right/bottom</code> relative to its original spot.
+              The original space is still reserved. Use when shifting an element
+              slightly or creating a containing block.
+            </p>
+          </div>
+          <div class="pos-card">
+            <div class="pos-tag pos-absolute">absolute</div>
+            <p>
+              Removed from normal flow. Positioned relative to its nearest
+              positioned ancestor. Use when placing tooltips, badges, or
+              decorative elements at an exact spot.
+            </p>
+          </div>
+          <div class="pos-card">
+            <div class="pos-tag pos-fixed">fixed</div>
+            <p>
+              Positioned relative to the viewport — stays on screen even when
+              scrolling. Use for sticky navbars, floating buttons, or persistent
+              footers. The footer on this page uses
+              <code>position: fixed</code>.
+            </p>
+          </div>
+        </div>
+
+        <div class="desk-wrapper">
+          <p class="desk-label">The Office Desk — a metaphor for positioning</p>
+
+          <div class="desk">
+            <div class="desk-item desk-static">
+              <span class="desk-item-icon">📄</span>
+              <span class="desk-item-name">static</span>
+              <span class="desk-item-desc">Sits in flow</span>
+            </div>
+
+            <div class="desk-relative-anchor">
+              <div class="desk-ghost"></div>
+              <div class="desk-item desk-relative">
+                <span class="desk-item-icon">📝</span>
+                <span class="desk-item-name">relative</span>
+                <span class="desk-item-desc"
+                  >Nudged from original spot. Dashed outline shows reserved
+                  space.</span
+                >
+              </div>
+            </div>
+
+            <div class="desk-item desk-absolute">
+              <span class="desk-item-icon">📌</span>
+              <span class="desk-item-name">absolute</span>
+              <span class="desk-item-desc">Pinned to desk corner</span>
+            </div>
+
+            <div class="desk-item desk-fixed-note">
+              <span class="desk-item-icon">🕐</span>
+              <span class="desk-item-name">fixed</span>
+              <span class="desk-item-desc">See the footer ↓</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Designed & coded by Aishwarya</span>
+      <span>For Web Development - CS5610</span>
+      <span>May, 2026</span>
+    </footer>
+  </body>
+</html>

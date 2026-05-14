@@ -1,0 +1,581 @@
+/* CSS CUSTOM PROPERTIES */
+:root {
+  --rose: #d6a99d;
+  --cream: #fbf3d5;
+  --sage: #d6dac8;
+  --teal: #9cafaa;
+  --dark: #2e2e2e;
+  --mid: #5a5a5a;
+  --font-display: "DM Serif Display", Georgia, serif;
+  --font-body: "DM Sans", sans-serif;
+  --footer-h: 52px;
+}
+
+/* RESET & BASE */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--dark);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  padding-bottom: calc(var(--footer-h) + 16px);
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--rose);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 56px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--cream);
+  letter-spacing: 0.02em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--cream);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.nav-links a:hover {
+  border-bottom-color: var(--teal);
+}
+
+/* header */
+.header {
+  padding: 5rem 2rem 4rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 3vw, 5rem);
+  line-height: 1.1;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.header h1 em {
+  color: var(--teal);
+  font-style: italic;
+}
+
+.header-sub {
+  font-size: 1.1rem;
+  color: var(--mid);
+  max-width: 520px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 4rem 2rem;
+}
+
+.section-alt {
+  background-color: var(--sage);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 0.5rem;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-intro {
+  color: var(--mid);
+  margin-bottom: 2rem;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subsection-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--dark);
+  margin: 3rem auto 0.5rem;
+  max-width: 860px;
+}
+
+/* TASK 1 — HTML Tags Grid */
+.tags-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  max-width: 860px;
+  margin: 0 auto 2rem;
+}
+
+.tag-card {
+  background: var(--cream);
+  border-left: 4px solid var(--rose);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+}
+
+.tag-card code {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--teal);
+  margin-bottom: 0.4rem;
+}
+
+.tag-card p {
+  font-size: 0.875rem;
+  color: var(--mid);
+}
+
+/* TASK 3 — 3×3 Grid */
+.plain-grid {
+  max-width: 860px;
+  margin: 1rem auto 0;
+  border: 2px solid var(--rose);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.grid-row {
+  font-size: 0; /* removes inline-block whitespace gap */
+  display: block;
+  border-bottom: 1px solid var(--rose);
+}
+
+.grid-row:last-child {
+  border-bottom: none;
+}
+
+.grid-cell {
+  display: inline-block;
+  width: 33.333%; /* 3 equal columns */
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.75rem 0;
+  color: var(--dark);
+  border-right: 1px solid var(--rose);
+  vertical-align: top;
+  background: var(--cream);
+}
+
+.grid-cell:last-child {
+  border-right: none;
+}
+
+/* TASK 4 — Box Model Gallery */
+.box-gallery {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.box-gallery-row {
+  background: var(--cream);
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.box-row-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--sage);
+  color: var(--dark);
+}
+
+.box-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.box-wrapper {
+  background-color: var(--teal);
+  border: 1px dashed var(--sage);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box-css-label {
+  background: var(--mid);
+  color: var(--cream);
+  font-family: monospace;
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.box-element {
+  background-color: var(--rose);
+  text-align: center;
+}
+
+.box-inner {
+  background-color: var(--cream);
+  color: var(--dark);
+  padding: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* TASK 5 — Font Size List */
+.font-list {
+  list-style: none;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.font-list li {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  display: grid;
+  grid-template-columns: 80px 80px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 1rem;
+  row-gap: 0.3rem;
+  align-items: center;
+  background: var(--cream);
+}
+
+.font-list li:nth-child(even) {
+  background: var(--sage);
+}
+
+.unit-badge {
+  font-family: monospace;
+  font-size: 0.85rem;
+  background: var(--rose);
+  color: var(--cream);
+  border-radius: 4px;
+  padding: 2px 6px;
+  justify-self: start;
+  align-self: center;
+}
+
+.unit-type {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.unit-text {
+  grid-column: 3;
+  grid-row: 1;
+  color: var(--dark);
+}
+
+.unit-note {
+  grid-column: 1 / -1;
+  font-size: 0.8rem;
+  color: var(--mid);
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
+.unit-note code {
+  background: rgba(0, 0, 0, 0.07);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-style: normal;
+}
+
+/* TASK 6 — Positioning */
+/* Explanation Cards */
+.positioning-explainers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 860px;
+  margin: 0 auto 2rem;
+}
+
+.pos-card {
+  background: var(--cream);
+  border-radius: 8px;
+  padding: 1.2rem;
+  border-top: 4px solid var(--teal);
+}
+
+.pos-tag {
+  display: inline-block;
+  font-family: monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-bottom: 0.6rem;
+  color: #fff;
+}
+
+.pos-static {
+  background: var(--mid);
+}
+.pos-relative {
+  background: var(--teal);
+}
+.pos-absolute {
+  background: var(--rose);
+}
+.pos-fixed {
+  background: var(--dark);
+}
+
+.pos-card p {
+  font-size: 0.875rem;
+  color: var(--mid);
+}
+
+/* Desk Demo */
+.desk-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.desk-label {
+  font-size: 0.8rem;
+  color: var(--mid);
+  margin-bottom: 0.5rem;
+}
+
+/* The desk surface */
+.desk {
+  position: relative;
+  background: linear-gradient(135deg, #c8a882, #a8784e);
+  border-radius: 12px;
+  height: 300px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+
+/* Subtle wood grain overlay */
+.desk::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    92deg,
+    transparent,
+    transparent 40px,
+    rgba(255, 255, 255, 0.03) 40px,
+    rgba(255, 255, 255, 0.03) 41px
+  );
+  pointer-events: none;
+}
+
+.desk-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.72rem;
+  gap: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  width: 110px;
+}
+
+.desk-item-icon {
+  font-size: 1.2rem;
+}
+
+.desk-item-name {
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 0.78rem;
+}
+
+.desk-item-desc {
+  font-size: 0.65rem;
+  opacity: 0.85;
+  line-height: 1.3;
+}
+
+.desk-static {
+  position: static;
+  background: var(--cream);
+  color: var(--dark);
+  transform: rotate(-1deg);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  vertical-align: top;
+}
+
+.desk-relative-anchor {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width: 110px;
+  height: 110px;
+  margin-left: 1.5rem;
+}
+
+.desk-ghost {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110px;
+  height: 100%;
+  border: 2px dashed var(--cream);
+  border-radius: 8px;
+  opacity: 0.5;
+}
+
+.desk-relative {
+  position: relative;
+  top: 18px;
+  left: 12px;
+  background: #f9e4a0;
+  color: var(--dark);
+  transform: rotate(2deg);
+  z-index: 2;
+}
+
+.desk-absolute {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--teal);
+  color: var(--cream);
+}
+
+.desk-fixed-note {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: var(--dark);
+  color: var(--cream);
+  font-size: 0.7rem;
+}
+
+/* TASK 6 — Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--footer-h);
+  background-color: var(--teal);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  z-index: 200;
+}
+
+/* UTILITY */
+code {
+  font-family: "Courier New", Courier, monospace;
+  background: rgba(0, 0, 0, 0.07);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.875em;
+}
+
+.tag-card p code {
+  display: block;
+  background: rgba(0, 0, 0, 0.06);
+  border-left: 3px solid var(--rose);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  color: var(--dark);
+  margin-top: 0.5rem;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* RESPONSIVE — basic mobile adjustments */
+@media (max-width: 640px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-links a {
+    font-size: 0.75rem;
+  }
+
+  .header {
+    padding: 3rem 1rem 2rem;
+  }
+
+  body {
+    margin: auto;
+  }
+
+  .section {
+    padding: 2.5rem 1rem;
+  }
+
+  .box-columns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer {
+    font-size: 0.7rem;
+    padding: 0 1rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+}
