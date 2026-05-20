@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SF Stays</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- ───── HEADER ───── -->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-mark">◈</span>
+          <span class="logo-text">SF Stays</span>
+        </div>
+        <div class="header-right">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            <span class="theme-icon">☀</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ───── VIBE FILTER BAR ───── -->
+    <section class="vibe-bar">
+      <div class="vibe-bar-inner">
+        <span class="vibe-label">Find your vibe</span>
+        <div class="vibe-tags" id="vibe-tags">
+          <button class="vibe-tag active" data-vibe="all">All</button>
+          <button class="vibe-tag" data-vibe="wifi">💻 Workspace</button>
+          <button class="vibe-tag" data-vibe="kitchen">🍳 Cook at Home</button>
+          <button class="vibe-tag" data-vibe="pets">🐾 Pet-Friendly</button>
+          <button class="vibe-tag" data-vibe="family">👨‍👩‍👧 Family</button>
+          <button class="vibe-tag" data-vibe="luxury">🛁 Luxury</button>
+          <button class="vibe-tag" data-vibe="instant">⚡ Instant Book</button>
+          <button class="vibe-tag" data-vibe="superhost">🏅 Superhost</button>
+        </div>
+        <label class="gem-toggle" id="gem-toggle-label">
+          <input type="checkbox" id="gem-toggle" />
+          <span class="gem-toggle-ui">✦ Hidden Gems only</span>
+        </label>
+      </div>
+    </section>
+
+    <!-- ───── RESULTS BAR ───── -->
+    <div class="results-bar">
+      <span class="results-count" id="listing-count"
+        >Showing <strong>50</strong> listings</span
+      >
+    </div>
+
+    <!-- ───── MAIN CONTENT ───── -->
+    <main class="main-content">
+      <!-- Loading state -->
+      <div class="loading-state" id="loading-state">
+        <div class="loading-spinner"></div>
+        <p>Finding your perfect stay…</p>
+      </div>
+
+      <!-- Empty state (shown when filters return nothing) -->
+      <div class="empty-state hidden" id="empty-state">
+        <p class="empty-icon">🌁</p>
+        <p class="empty-text">No listings match this vibe.</p>
+        <button class="reset-btn" id="reset-btn">Reset filters</button>
+      </div>
+
+      <!-- Listings grid -->
+      <div class="listings-grid" id="listings-grid"></div>
+    </main>
+
+    <!-- ───── CARD TEMPLATE ───── -->
+    <template id="card-template">
+      <article class="listing-card">
+        <div class="gem-badge hidden">✦ Hidden Gem</div>
+
+        <!-- ── FRONT ── -->
+        <div class="card-front">
+          <div class="card-thumb-wrap">
+            <img class="card-thumb" src="" alt="" loading="lazy" />
+            <div class="card-room-type"></div>
+          </div>
+          <div class="card-body">
+            <div class="card-host">
+              <img class="host-avatar" src="" alt="" />
+              <div class="host-meta">
+                <span class="host-name"></span>
+                <span class="superhost-badge hidden">Superhost</span>
+              </div>
+              <div class="card-rating">
+                <span class="rating-star">★</span>
+                <span class="rating-value"></span>
+                <span class="rating-count"></span>
+              </div>
+            </div>
+            <h2 class="card-name"></h2>
+            <div class="card-description-wrap">
+              <p class="card-description"></p>
+              <button class="read-more hidden">Read more</button>
+            </div>
+            <div class="card-amenities">
+              <div class="amenity-pills"></div>
+            </div>
+            <div class="card-footer">
+              <span class="card-neighbourhood"></span>
+              <div class="card-price">
+                <span class="price-value"></span>
+                <span class="price-unit">/ night</span>
+              </div>
+            </div>
+          </div>
+          <div class="flip-hint">👆 Click for details</div>
+        </div>
+
+        <!-- ── BACK ── -->
+        <div class="card-back">
+          <button class="back-close" aria-label="Flip back">✕</button>
+          <div class="back-body">
+            <div class="back-host">
+              <img class="back-avatar" src="" alt="" />
+              <div class="back-host-meta">
+                <span class="back-host-name"></span>
+                <span class="back-superhost hidden">🏅 Superhost</span>
+              </div>
+              <div class="card-rating">
+                <span class="rating-star">★</span>
+                <span class="back-rating-value"></span>
+                <span class="back-rating-count"></span>
+              </div>
+            </div>
+            <h2 class="back-name"></h2>
+            <p class="back-neighbourhood"></p>
+            <div class="back-stats">
+              <div class="back-stat">
+                <span class="back-stat-value back-beds"></span>
+                <span class="back-stat-label">beds</span>
+              </div>
+              <div class="back-stat">
+                <span class="back-stat-value back-bedrooms"></span>
+                <span class="back-stat-label">bedrooms</span>
+              </div>
+              <div class="back-stat">
+                <span class="back-stat-value back-accommodates"></span>
+                <span class="back-stat-label">guests</span>
+              </div>
+              <div class="back-stat">
+                <span class="back-stat-value back-price"></span>
+                <span class="back-stat-label">/ night</span>
+              </div>
+            </div>
+            <p class="back-description"></p>
+            <div class="back-amenities-label">Amenities</div>
+            <div class="back-amenities"></div>
+            <div class="back-avail-label">Availability</div>
+            <div class="back-avail-bars">
+              <div class="back-avail-row">
+                <span class="avail-period">30 days</span>
+                <div class="avail-bar-track">
+                  <div class="avail-bar-fill" data-avail="30"></div>
+                </div>
+                <span class="avail-num back-avail-30"></span>
+              </div>
+              <div class="back-avail-row">
+                <span class="avail-period">60 days</span>
+                <div class="avail-bar-track">
+                  <div class="avail-bar-fill" data-avail="60"></div>
+                </div>
+                <span class="avail-num back-avail-60"></span>
+              </div>
+              <div class="back-avail-row">
+                <span class="avail-period">90 days</span>
+                <div class="avail-bar-track">
+                  <div class="avail-bar-fill" data-avail="90"></div>
+                </div>
+                <span class="avail-num back-avail-90"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <!-- ───── FOOTER ───── -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo-mark">◈</span>
+          <span class="logo-text">SF Stays</span>
+        </div>
+        <p class="footer-note">
+          Listing data sourced from
+          <a href="http://insideairbnb.com" target="_blank" rel="noopener"
+            >Inside Airbnb</a
+          >. Built with vanilla HTML, CSS &amp; JavaScript.
+        </p>
+        <p class="footer-copy">
+          © 2026 SF Stays — Made for educational purposes
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
