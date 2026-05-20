@@ -590,6 +590,7 @@ button {
   font-weight: 700;
   line-height: 1.35;
   color: var(--text-primary);
+  line-clamp: 2;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -606,6 +607,7 @@ button {
   font-size: 0.82rem;
   line-height: 1.6;
   color: var(--text-secondary);
+  line-clamp: 3;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -614,6 +616,7 @@ button {
 }
 
 .card-description.expanded {
+  line-clamp: unset;
   -webkit-line-clamp: unset;
   display: block;
 }
@@ -807,7 +810,7 @@ button {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding-right: 2rem; /* space for close button */
+  padding-right: 2rem;
 }
 
 .back-avatar {
