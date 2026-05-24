@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Aishwarya Rajmohan" />
+    <meta
+      name="description"
+      content="About Aishwarya — Full Stack Developer, Masters student, caffeine enthusiast."
+    />
+    <meta
+      name="keywords"
+      content="full stack developer, about, experience, timeline"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&family=Caveat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <title>About | Aishwarya</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="nav-links nav-links--left">
+          <li><a href="./index.html#projects">Work</a></li>
+          <li><a href="./about.html" class="nav-link--active">About</a></li>
+        </ul>
+        <a href="./index.html" class="nav-logo" aria-label="Home">
+          <span class="nav-signature-text">AR</span>
+        </a>
+        <ul class="nav-links nav-links--right">
+          <li>
+            <a
+              href="https://linkedin.com/in/aishwaryamohan1698"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              href="./assets/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Resume</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ============ BIO ============ -->
+      <section class="about-hero">
+        <div class="about-hero__content">
+          <h1 class="about-hero__title">About me</h1>
+          <p class="about-hero__bio">
+            I'm Aishwarya — a full stack developer who spent six years in India
+            building backends that don't fall over and APIs that actually make
+            sense, then packed up and moved to the US chasing a Masters degree
+            and an adventure I wasn't going to pass up.
+          </p>
+          <p class="about-hero__bio">
+            I don't just fix broken things — I like understanding why they broke
+            and making them genuinely better. Distributed systems,
+            mainframe-to-cloud migrations, iOS apps — I go where the problem is.
+            I'm drawn to the things you can't see, and there's something
+            satisfying about building a system no one notices — because no one
+            noticing means nothing broke.
+          </p>
+          <p class="about-hero__bio">
+            These days, AI is part of my toolkit the way Stack Overflow always
+            was — a shortcut to the interesting part, not a replacement for
+            understanding it. The fundamentals are still mine. The thinking is
+            still mine. The low-grade anxiety about losing both? Also mine.
+          </p>
+          <p class="about-hero__bio">
+            Fuelled by caffeine, boba, and an alarming number of pastries.
+            Currently open to full-time roles where I can build things that
+            matter.
+          </p>
+        </div>
+        <div class="about-hero__image-tag-wrapper">
+          <div class="about-hero__image-wrapper">
+            <img
+              src="./assets/portrait-2.jpeg"
+              alt="Aishwarya smiling"
+              class="about-hero__image"
+            />
+          </div>
+          <div class="about-hero__tags">
+            <span class="about-tag">caffeine-powered</span>
+            <span class="about-tag">boba enthusiast</span>
+            <span class="about-tag">backend-leaning</span>
+            <span class="about-tag">Chennai → US</span>
+            <span class="about-tag">Masters student</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TIMELINE ============ -->
+      <section class="section-timeline">
+        <h2 class="section-title section-title">My journey</h2>
+        <p class="timeline-intro">
+          From Coimbatore classrooms to global tech companies — here's the story
+          so far.
+        </p>
+
+        <div class="timeline">
+          <!-- Masters -->
+          <div class="timeline-item timeline-item--right" data-timeline>
+            <div class="timeline-dot">
+              <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card__header">
+                <span class="timeline-badge timeline-badge--education"
+                  >Education</span
+                >
+                <span class="timeline-date">Jan 2026 — Present</span>
+              </div>
+              <h3 class="timeline-card__company">Northeastern University</h3>
+              <p class="timeline-card__role">
+                Master of Science — Computer Science
+              </p>
+              <p class="timeline-card__location">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                Boston, MA, USA
+              </p>
+            </div>
+          </div>
+
+          <!-- PayPal -->
+          <div class="timeline-item timeline-item--left" data-timeline>
+            <div class="timeline-dot">
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card__header">
+                <span class="timeline-badge timeline-badge--work">Work</span>
+                <span class="timeline-date">May 2024 — Sep 2025</span>
+              </div>
+              <h3 class="timeline-card__company">
+                PayPal India Private Limited
+              </h3>
+              <p class="timeline-card__role">
+                Senior Software Engineer · Payments Domain
+              </p>
+              <p class="timeline-card__location">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                Chennai, India
+              </p>
+              <ul class="timeline-card__bullets">
+                <li>
+                  Designed distributed rate-limiting for high-traffic RESTful
+                  APIs in a microservices architecture, improving fault
+                  tolerance and system reliability.
+                </li>
+                <li>
+                  Led platform-wide JDK upgrades and increased unit test
+                  coverage, improving application performance and
+                  maintainability.
+                </li>
+                <li>
+                  Remediated security vulnerabilities through secure coding
+                  practices and dependency upgrades, ensuring enterprise
+                  compliance.
+                </li>
+              </ul>
+              <div class="timeline-card__tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">Microservices</span>
+                <span class="tag">REST APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Walmart -->
+          <div class="timeline-item timeline-item--right" data-timeline>
+            <div class="timeline-dot">
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card__header">
+                <span class="timeline-badge timeline-badge--work">Work</span>
+                <span class="timeline-date">Sep 2021 — May 2024</span>
+              </div>
+              <h3 class="timeline-card__company">
+                Walmart Global Technology Services India
+              </h3>
+              <p class="timeline-card__role">
+                Software Development Engineer III · Finance Data Services
+              </p>
+              <p class="timeline-card__location">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                Chennai, India
+              </p>
+              <ul class="timeline-card__bullets">
+                <li>
+                  Saved
+                  <span class="timeline-highlight">$143,000 annually</span>
+                  through cloud cost optimization by analyzing Kubernetes
+                  resource allocation and database usage.
+                </li>
+                <li>
+                  Designed and integrated Disaster Recovery plans and Error
+                  Reprocessing frameworks, improving system resilience.
+                </li>
+                <li>
+                  Led Mainframe-to-Cloud migration implementing synchronous data
+                  persistence across SQL and NoSQL systems using Kafka and CDC
+                  connectors.
+                </li>
+                <li>
+                  Built and enhanced REST APIs supporting
+                  <span class="timeline-highlight">30 TPS</span> for onboarding
+                  new consumers and handling pipeline enhancements.
+                </li>
+                <li>
+                  Implemented heavy-load applications in microservice
+                  architecture and handled RCA for critical production issues.
+                </li>
+                <li>
+                  Wrote automation scripts to reduce man-hours on redundant
+                  operational tasks.
+                </li>
+                <li>
+                  Handled vulnerability fixes and compliance activities under
+                  strict deadlines.
+                </li>
+              </ul>
+              <div class="timeline-card__awards">
+                <span class="award-badge">
+                  <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+                  Excellence Award 2022
+                </span>
+                <span class="award-badge">
+                  <i class="fa-solid fa-star" aria-hidden="true"></i>
+                  Bravo Award
+                </span>
+              </div>
+              <div class="timeline-card__tags">
+                <span class="tag">Kafka</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">Spring Batch</span>
+                <span class="tag">Docker</span>
+                <span class="tag">IBM DB2</span>
+                <span class="tag">MongoDB</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Zilker — EY projects combined under one employer, shown as sub-projects -->
+          <div class="timeline-item timeline-item--left" data-timeline>
+            <div class="timeline-dot">
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card__header">
+                <span class="timeline-badge timeline-badge--work">Work</span>
+                <span class="timeline-date">Nov 2020 — Sep 2021</span>
+              </div>
+              <h3 class="timeline-card__company">
+                EY Global Delivery Services
+              </h3>
+              <p class="timeline-card__role">
+                Associate Engineer · Full Stack + Native iOS Developer
+              </p>
+              <p class="timeline-card__location">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                Chennai, India
+              </p>
+
+              <p class="timeline-card__project-label">
+                Consumer iOS Application
+              </p>
+              <ul class="timeline-card__bullets">
+                <li>
+                  Revamped entire consumer iOS app with best practices and
+                  modern design patterns.
+                </li>
+                <li>
+                  Replaced REST API usage with GraphQL integration using Apollo
+                  Client.
+                </li>
+                <li>
+                  Implemented MVVM, Dependency Injection, Coordinator pattern,
+                  Clean Architecture, Reactive programming with Combine, and
+                  UIKit.
+                </li>
+              </ul>
+
+              <p class="timeline-card__project-label">
+                Consumer Web Application
+              </p>
+              <ul class="timeline-card__bullets">
+                <li>
+                  Built backend in a
+                  <span class="timeline-highlight">17-member team</span>
+                  integrating Spring Boot microservices with Confluent Kafka
+                  using request-reply patterns.
+                </li>
+                <li>
+                  Implemented DLQ concepts for error scenarios and Spring Batch
+                  with Couchbase N1QL for data migration.
+                </li>
+                <li>Documented REST endpoints with Swagger.</li>
+              </ul>
+
+              <div class="timeline-card__tags">
+                <span class="tag">iOS</span>
+                <span class="tag">Swift</span>
+                <span class="tag">GraphQL</span>
+                <span class="tag">Kafka</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">Couchbase</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Zilker -->
+          <div class="timeline-item timeline-item--right" data-timeline>
+            <div class="timeline-dot">
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card__header">
+                <span class="timeline-badge timeline-badge--work">Work</span>
+                <span class="timeline-date">May 2019 — Oct 2020</span>
+              </div>
+              <h3 class="timeline-card__company">
+                Zilker Technology India Private Limited
+              </h3>
+              <p class="timeline-card__role">
+                Associate Consultant · Full Stack Developer
+              </p>
+              <p class="timeline-card__location">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                Chennai, India
+              </p>
+
+              <p class="timeline-card__project-label">
+                Admin Portal — Energy Provider
+              </p>
+              <ul class="timeline-card__bullets">
+                <li>
+                  Built data visualizations with Chart.js for multiple metrics
+                  and statistics.
+                </li>
+                <li>
+                  Processed large-scale datasets with D3.js and stored data in
+                  Couchbase.
+                </li>
+                <li>
+                  Developed REST endpoints with multiple async operations using
+                  Promises.
+                </li>
+              </ul>
+
+              <p class="timeline-card__project-label">
+                Organisation Management Portal
+              </p>
+              <ul class="timeline-card__bullets">
+                <li>
+                  Built REST APIs with Spring Boot, JPA, Hibernate, Spring
+                  WebFlux, Spring Cloud and MySQL.
+                </li>
+                <li>
+                  Refactored codebase to improve efficiency, quality and
+                  readability.
+                </li>
+              </ul>
+
+              <p class="timeline-card__project-label">
+                Twitter Trend Analysis App
+              </p>
+              <ul class="timeline-card__bullets">
+                <li>
+                  Designed architecture using Spring Cloud Services and Spring
+                  Kafka.
+                </li>
+                <li>
+                  Built Kafka producer application routing messages across
+                  partitions based on availability.
+                </li>
+                <li>
+                  Processed Twitter API data for trend analysis and
+                  decision-making support.
+                </li>
+              </ul>
+
+              <div class="timeline-card__tags">
+                <span class="tag">Spring Boot</span>
+                <span class="tag">Kafka</span>
+                <span class="tag">Couchbase</span>
+                <span class="tag">D3.js</span>
+                <span class="tag">Chart.js</span>
+                <span class="tag">MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Undergrad -->
+          <div class="timeline-item timeline-item--left" data-timeline>
+            <div class="timeline-dot">
+              <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card__header">
+                <span class="timeline-badge timeline-badge--education"
+                  >Education</span
+                >
+                <span class="timeline-date">2015 — 2019</span>
+              </div>
+              <h3 class="timeline-card__company">
+                Sri Krishna College of Engineering and Technology
+              </h3>
+              <p class="timeline-card__role">
+                Bachelor of Engineering — Electronics and Communication
+              </p>
+              <p class="timeline-card__location">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                Coimbatore, India
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Designed &amp; built by Aishwarya &copy; 2026</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="./index.html">Home</a>
+        <a href="./index.html#contact">Contact</a>
+      </nav>
+    </footer>
+
+    <script type="module" src="./js/about.js"></script>
+  </body>
+</html>
