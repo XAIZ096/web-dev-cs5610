@@ -1,0 +1,499 @@
+/* ===== ROOT VARIABLES ===== */
+:root {
+  /* ===== PALETTE — change only these 5 to swap the whole theme ===== */
+  --palette-bg: #9b59b6;
+  --palette-surface: #ffffff;
+  --palette-primary: #c471ed;
+  --palette-strong: #7d3c98;
+  --palette-muted: #f3e8ff;
+
+  /* ===== SEMANTIC ROLES ===== */
+  --color-bg: var(--palette-bg);
+  --color-surface: var(--palette-surface);
+  --color-border: var(--palette-primary);
+  --color-icon: var(--palette-strong);
+  --color-icon-hover-bg: var(--palette-strong);
+  --color-text-heading: var(--palette-surface);
+  --color-text-body: var(--palette-muted);
+  --color-text-on-surface: var(--palette-strong);
+  --color-portrait-border: var(--palette-surface);
+  --color-cursor: var(--palette-surface);
+  --color-typewriter: var(--palette-muted);
+
+  /* ===== TYPOGRAPHY ===== */
+  --font-display: "Playfair Display", serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+/* ===== BASE ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-body);
+  color: var(--color-text-body);
+  padding-top: 5rem;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0.75rem 2.5rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+
+  /* floating centered pill */
+  position: fixed;
+  top: 1.25rem;
+  left: 50%;
+  translate: -50% 0;
+  z-index: 100;
+
+  /* prevent it from stretching full width */
+  width: fit-content;
+  max-width: calc(100vw - 3rem);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-text-on-surface);
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: var(--color-border);
+}
+
+.nav-signature {
+  height: 36px;
+  width: auto;
+}
+
+.nav-signature-text {
+  font-family: "Caveat", cursive;
+  font-size: 1.6rem;
+  color: var(--color-text-on-surface);
+  text-decoration: none;
+  line-height: 1;
+}
+
+/* ===== SIGNATURE LOGO ===== */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nav-signature {
+  height: 48px;
+  width: auto;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+  padding: 2rem;
+}
+
+/* ===== GREETING ===== */
+.hero-greeting {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--color-text-heading);
+  text-align: center;
+}
+
+.hero-greeting span {
+  color: var(--color-typewriter);
+}
+
+/* ===== PORTRAIT CONTAINER ===== */
+.hero-portrait-container {
+  position: relative;
+  overflow: visible;
+  padding: 100px;
+  margin: -100px;
+}
+
+/* ===== PORTRAIT WRAPPER ===== */
+.hero-portrait-wrapper {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  transition: transform 0.4s ease;
+  z-index: 2;
+}
+
+/* ===== PORTRAIT IMAGE ===== */
+.hero-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--color-portrait-border);
+  display: block;
+  position: relative;
+}
+
+/* ===== ORBIT ICONS — BASE ===== */
+.orbit-icon {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-text-on-surface);
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  z-index: 1;
+  pointer-events: none;
+  text-decoration: none;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  opacity: 0;
+  scale: 0.4;
+  transition:
+    opacity 1.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    scale 1.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    top 1.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    left 1.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    translate 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.orbit-icon i {
+  font-size: 2rem;
+  color: var(--color-icon);
+  transition: color 0.2s ease;
+}
+
+.orbit-icon span {
+  font-size: 0.7rem;
+  font-family: var(--font-body);
+  color: var(--color-text-on-surface);
+  margin-top: 4px;
+}
+
+/* ===== ORBIT ICONS — VISIBLE ON HOVER ===== */
+.hero-portrait-container.is-hovered .orbit-icon {
+  opacity: 1;
+  scale: 1;
+  pointer-events: auto;
+}
+
+.hero-portrait-container.is-hovered .orbit-icon--projects {
+  top: 20%;
+  left: 10%;
+  translate: 0 0;
+  transition-delay: 0s;
+}
+
+.hero-portrait-container.is-hovered .orbit-icon--skills {
+  top: 20%;
+  left: 70%;
+  translate: 0 0;
+  transition-delay: 0.08s;
+}
+
+.hero-portrait-container.is-hovered .orbit-icon--contact {
+  top: 80%;
+  left: 50%;
+  translate: -50% 0;
+  transition-delay: 0.16s;
+}
+
+/* ===== ORBIT ICON HOVER STATE ===== */
+.orbit-icon:hover {
+  background-color: var(--color-icon-hover-bg);
+  border-color: var(--color-surface);
+  cursor: pointer;
+}
+
+.orbit-icon:hover i {
+  color: var(--color-text-heading);
+}
+
+.orbit-icon:hover span {
+  color: var(--color-text-heading);
+}
+
+/* ===== TYPEWRITER ===== */
+.hero-typewriter {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: var(--color-typewriter);
+  text-align: center;
+  min-height: 2.5rem;
+}
+
+.typewriter-cursor {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--color-cursor);
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ===== PROJECTS SECTION ===== */
+.section-projects {
+  padding: 6rem 2rem;
+  background-color: var(--color-surface);
+  text-align: center;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--color-text-on-surface);
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-icon);
+  margin-bottom: 3rem;
+  opacity: 0.8;
+}
+
+/* ===== CAROUSEL WRAPPER ===== */
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  flex: 1;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0.25rem;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* ===== CAROUSEL BUTTONS ===== */
+.carousel-btn {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-icon);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background-color: var(--color-icon-hover-bg);
+  color: var(--color-text-heading);
+  border-color: var(--color-icon-hover-bg);
+}
+
+.carousel-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* ===== DOTS ===== */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1.5rem;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-border);
+  opacity: 0.35;
+  cursor: pointer;
+  padding: 0;
+  transition:
+    opacity 0.2s ease,
+    scale 0.2s ease;
+}
+
+.carousel-dot.is-active {
+  opacity: 1;
+  scale: 1.3;
+  background-color: var(--color-icon);
+}
+
+/* ===== PROJECT CARD ===== */
+.project-card {
+  flex: 0 0 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.project-card__link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* ===== CARD IMAGE ===== */
+.project-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.project-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: scale 0.3s ease;
+}
+
+.project-card:hover .project-card__image {
+  scale: 1.05;
+}
+
+.project-card__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(125, 60, 152, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-card__overlay {
+  opacity: 1;
+}
+
+.project-card__cta {
+  color: var(--color-surface);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: 0.04em;
+}
+
+/* ===== CARD BODY ===== */
+.project-card__body {
+  padding: 1.25rem;
+  text-align: left;
+}
+
+.project-card__title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-text-on-surface);
+  margin-bottom: 0.4rem;
+}
+
+.project-card__desc {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-icon);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tag {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background-color: var(--palette-muted);
+  color: var(--color-text-on-surface);
+}

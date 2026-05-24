@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Aishwarya Rajmohan" />
+    <meta
+      name="description"
+      content="Aishwarya — Full Stack Developer portfolio"
+    />
+    <meta
+      name="keywords"
+      content="full stack developer, portfolio, java, springboot"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&family=Caveat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Aishwarya | Full Stack Developer</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="nav-links nav-links--left">
+          <li><a href="#projects">Work</a></li>
+          <li><a href="./about.html">About</a></li>
+        </ul>
+
+        <a href="./index.html" class="nav-logo" aria-label="Home">
+          <span class="nav-signature-text">AR</span>
+        </a>
+
+        <ul class="nav-links nav-links--right">
+          <li>
+            <a
+              href="https://linkedin.com/in/aishwaryamohan1698"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              href="./assets/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Resume</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h1 class="hero-greeting">Hi, I am Aishwarya</h1>
+
+        <div class="hero-portrait-container">
+          <div class="hero-portrait-wrapper">
+            <img
+              src="assets/portrait.png"
+              alt="Portrait of Aishwarya"
+              class="hero-portrait"
+            />
+          </div>
+
+          <a
+            href="#projects"
+            class="orbit-icon orbit-icon--projects"
+            aria-label="Go to projects section"
+          >
+            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+            <span>Projects</span>
+          </a>
+
+          <a
+            href="#skills"
+            class="orbit-icon orbit-icon--skills"
+            aria-label="Go to skills section"
+          >
+            <i class="fa-solid fa-code" aria-hidden="true"></i>
+            <span>Skills</span>
+          </a>
+
+          <a
+            href="#contact"
+            class="orbit-icon orbit-icon--contact"
+            aria-label="Go to contact section"
+          >
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <span>Contact</span>
+          </a>
+        </div>
+
+        <p class="hero-typewriter">
+          <span class="typewriter-text"></span>
+          <span class="typewriter-cursor" aria-hidden="true">|</span>
+        </p>
+      </section>
+      <section id="projects" class="section-projects">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Things I have built</p>
+
+        <div class="carousel">
+          <button
+            class="carousel-btn carousel-btn--prev"
+            aria-label="Previous project"
+          >
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+
+          <div class="carousel-viewport">
+            <ul class="carousel-track">
+              <li class="project-card">
+                <a
+                  href="./projects.html#project-one"
+                  class="project-card__link"
+                >
+                  <div class="project-card__image-wrapper">
+                    <img
+                      src="./assets/projects/project1.png"
+                      data-gif="./assets/projects/project1.gif"
+                      alt="Screenshot of Project One"
+                      class="project-card__image"
+                    />
+                    <div class="project-card__overlay">
+                      <span class="project-card__cta"
+                        >View Project
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="project-card__body">
+                    <h3 class="project-card__title">Project One</h3>
+                    <p class="project-card__desc">
+                      Short description of what this does and the problem it
+                      solves.
+                    </p>
+                    <ul class="project-card__tags">
+                      <li class="tag">React</li>
+                      <li class="tag">Node.js</li>
+                      <li class="tag">PostgreSQL</li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+
+              <li class="project-card">
+                <a
+                  href="./projects.html#project-two"
+                  class="project-card__link"
+                >
+                  <div class="project-card__image-wrapper">
+                    <img
+                      src="./assets/projects/project2.png"
+                      alt="Screenshot of Project Two"
+                      class="project-card__image"
+                    />
+                    <div class="project-card__overlay">
+                      <span class="project-card__cta"
+                        >View Project
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="project-card__body">
+                    <h3 class="project-card__title">Project Two</h3>
+                    <p class="project-card__desc">
+                      Short description of what this does and the problem it
+                      solves.
+                    </p>
+                    <ul class="project-card__tags">
+                      <li class="tag">TypeScript</li>
+                      <li class="tag">Express</li>
+                      <li class="tag">MongoDB</li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+
+              <li class="project-card">
+                <a
+                  href="./projects.html#project-three"
+                  class="project-card__link"
+                >
+                  <div class="project-card__image-wrapper">
+                    <img
+                      src="./assets/projects/project3.png"
+                      alt="Screenshot of Project Three"
+                      class="project-card__image"
+                    />
+                    <div class="project-card__overlay">
+                      <span class="project-card__cta"
+                        >View Project
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="project-card__body">
+                    <h3 class="project-card__title">Project Three</h3>
+                    <p class="project-card__desc">
+                      Short description of what this does and the problem it
+                      solves.
+                    </p>
+                    <ul class="project-card__tags">
+                      <li class="tag">Spring Boot</li>
+                      <li class="tag">Java</li>
+                      <li class="tag">MySQL</li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+
+              <li class="project-card">
+                <a
+                  href="./projects.html#project-four"
+                  class="project-card__link"
+                >
+                  <div class="project-card__image-wrapper">
+                    <img
+                      src="./assets/projects/project4.png"
+                      alt="Screenshot of Project Four"
+                      class="project-card__image"
+                    />
+                    <div class="project-card__overlay">
+                      <span class="project-card__cta"
+                        >View Project
+                        <i
+                          class="fa-solid fa-arrow-right"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="project-card__body">
+                    <h3 class="project-card__title">Project Four</h3>
+                    <p class="project-card__desc">
+                      Short description of what this does and the problem it
+                      solves.
+                    </p>
+                    <ul class="project-card__tags">
+                      <li class="tag">Next.js</li>
+                      <li class="tag">Tailwind</li>
+                      <li class="tag">Prisma</li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <button
+            class="carousel-btn carousel-btn--next"
+            aria-label="Next project"
+          >
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="carousel-dots" aria-label="Carousel navigation"></div>
+      </section>
+    </main>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
