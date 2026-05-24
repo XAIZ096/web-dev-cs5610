@@ -1,6 +1,7 @@
 import { initTypewriter } from "./typewriter.js";
 import { initTilt } from "./tilt.js";
 import { initCarousel, initCardGifs } from "./carousel.js";
+import { initBoba } from "./boba.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initTypewriter(".typewriter-text");
@@ -12,4 +13,5 @@ document.addEventListener("DOMContentLoaded", () => {
     ".carousel-dots",
   );
   initCardGifs();
+  initBoba("#skills");
 });
