@@ -127,6 +127,7 @@ export function initBoba(sectionSelector) {
 
   // hover - show skill name and tech list
   balls.forEach((ball) => {
+    // desktop hover
     ball.addEventListener("mouseenter", () => {
       const skill = ball.dataset.skill;
       if (!skill || !detail) return;
@@ -139,5 +140,27 @@ export function initBoba(sectionSelector) {
       if (!detail) return;
       detail.classList.remove("is-visible");
     });
+
+    // mobile tap
+    ball.addEventListener(
+      "touchstart",
+      (e) => {
+        e.preventDefault(); // stops the synthetic mouse events firing after
+        const skill = ball.dataset.skill;
+        if (!skill || !detail) return;
+        detailName.textContent = skill;
+        detailTechs.textContent = SKILLS[skill] || "";
+        detail.classList.add("is-visible");
+      },
+      { passive: false },
+    );
+  });
+
+  document.addEventListener("touchstart", (e) => {
+    if (!detail) return;
+    const tappedBall = e.target.closest(".boba-ball");
+    if (!tappedBall) {
+      detail.classList.remove("is-visible");
+    }
   });
 }
