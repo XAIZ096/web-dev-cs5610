@@ -20,13 +20,14 @@ main {
 
 /* ===== ABOUT HERO ===== */
 .about-hero {
-  min-height: 100dvh;
+  height: 90dvh;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5rem;
   padding: 6rem 4rem;
   background-color: var(--color-bg);
+  position: relative;
 }
 
 .about-hero__content {
@@ -80,6 +81,16 @@ main {
   background-color: rgba(255, 255, 255, 0.25);
 }
 
+.about-hero-scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  translate: -50% 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
 /* ===== ABOUT HERO IMAGE ===== */
 .about-hero__image-tag-wrapper {
   flex-shrink: 0;
@@ -87,7 +98,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 1.25rem;
-  width: 280px; /* fixed width so tags match image */
+  width: 280px;
 }
 
 .about-hero__image-wrapper {
