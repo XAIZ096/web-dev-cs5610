@@ -78,6 +78,7 @@ export function initBoba(sectionSelector) {
             void ball.offsetWidth;
             ball.classList.add("is-dropped");
           });
+          playBobaSound();
         } else {
           if (isExploded) return;
           balls.forEach((ball) => ball.classList.remove("is-dropped"));
@@ -107,6 +108,7 @@ export function initBoba(sectionSelector) {
         void ball.offsetWidth;
         ball.classList.add("is-dropped");
       });
+      playBobaSound();
       return;
     }
 
@@ -163,4 +165,12 @@ export function initBoba(sectionSelector) {
       detail.classList.remove("is-visible");
     }
   });
+
+  const dropSound = new Audio("./assets/audio/boba-drop.mp3");
+  dropSound.volume = 0.1;
+
+  function playBobaSound() {
+    dropSound.currentTime = 0;
+    dropSound.play().catch(() => {});
+  }
 }
