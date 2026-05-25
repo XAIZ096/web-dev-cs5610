@@ -104,19 +104,11 @@ main {
   color: var(--color-border);
 }
 
-.nav-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  text-decoration: none;
-}
-
-.nav-signature-text {
-  font-family: "Caveat", cursive;
-  font-size: 1.6rem;
-  color: var(--color-text-on-surface);
-  line-height: 1;
+.nav-logo__img {
+  height: 38px;
+  width: 38px;
+  display: block;
+  object-fit: cover;
 }
 
 /* ===== HERO SECTION ===== */
