@@ -1,0 +1,29 @@
+{
+  "name": "personal-homepage",
+  "version": "1.0.0",
+  "description": "A front-end only static page with html, css and js that gives information about me like a portfolio",
+  "keywords": [
+    "full",
+    "stack",
+    "developer",
+    "portfolio"
+  ],
+  "homepage": "https://github.com/aish6498-hub/web-dev-cs5610#readme",
+  "bugs": {
+    "url": "https://github.com/aish6498-hub/web-dev-cs5610/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aish6498-hub/web-dev-cs5610.git"
+  },
+  "license": "MIT",
+  "author": "Aishwarya Rajmohan",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"No tests yet\""
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

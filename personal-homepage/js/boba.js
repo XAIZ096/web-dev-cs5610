@@ -147,7 +147,7 @@ export function initBoba(sectionSelector) {
     ball.addEventListener(
       "touchstart",
       (e) => {
-        e.preventDefault(); // stops the synthetic mouse events firing after
+        e.preventDefault();
         const skill = ball.dataset.skill;
         if (!skill || !detail) return;
         detailName.textContent = skill;
@@ -166,11 +166,22 @@ export function initBoba(sectionSelector) {
     }
   });
 
-  const dropSound = new Audio("./assets/audio/boba-drop.mp3");
-  dropSound.volume = 0.1;
+  let dropSound = null;
 
   function playBobaSound() {
+    if (!dropSound) return;
     dropSound.currentTime = 0;
     dropSound.play().catch(() => {});
   }
+
+  // browser policy not letting me play on scroll without user interaction.
+  // unlock audio on first user interaction
+  function unlockAudio() {
+    if (dropSound) return;
+    dropSound = new Audio("/assets/audio/boba-drop.mp3");
+    dropSound.volume = 0.1;
+  }
+
+  document.addEventListener("click", unlockAudio, { once: true });
+  document.addEventListener("keydown", unlockAudio, { once: true });
 }

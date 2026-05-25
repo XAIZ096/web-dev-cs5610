@@ -13,10 +13,6 @@ main {
     transform: translateY(0);
   }
 }
-/* ===== ACTIVE NAV LINK ===== */
-.nav-link--active {
-  color: var(--color-border) !important;
-}
 
 /* ===== ABOUT HERO ===== */
 .about-hero {
